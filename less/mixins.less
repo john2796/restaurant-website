@@ -1,5 +1,8 @@
 // Mixins in here
 
+.red() {
+  border: 1px solid red;
+}
 
 .center() {
   display: flex;
@@ -34,21 +37,44 @@
   }
 }
 
-// display: block;
-// margin: 0 auto;
-// font-family: "Cabin", sans-serif;
-// font-weight: 500;
-// text-transform: uppercase;
-// text-align: center;
-// font-size: 18px;
-// color: #bfa760;
-// border: 2px solid #bfa760;
-// padding: 16px 10px;
-// margin-top: 68px;
-// margin-bottom: 23px;
-// background: transparent;
-// -webkit-transition: 0.5s all ease;
-// -o-transition: 0.5s all ease;
-// transition: 0.5s all ease;
-// width: 260px;
-// height: 65px;
+.btn {
+  display: block;
+  margin: 0 auto;
+  font-family: "Cabin", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8rem;
+  color: @gold;
+  border: 2px solid @gold;
+  padding: 16px 10px;
+  margin-top: 68px;
+  margin-bottom: 23px;
+  background: transparent;
+  -webkit-transition: 0.5s all ease;
+  -o-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  width: 260px;
+  height: 65px;
+
+  &:hover {
+    background: @gold;
+    color: @white;
+  }
+}
+
+
+// Calling a mixin example 
+// .btn {
+//   #mixins.border-radius(5px);
+//   #mixins.btn-primary(100px, 9px);
+
+//   @media @mobile {
+//     //border-radius
+//     #mixins.border-radius(5px);
+//     // width & padding top-bottom
+//     #mixins.btn-primary(450px, 25px);
+//     font-size: 2rem;
+//     margin-bottom: 20px;
+//   }
+// }
