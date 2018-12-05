@@ -1,0 +1,54 @@
+// Mixins in here
+
+
+.center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.button-creator(@width, @height, @bg-color, @font-color, @font-size) {
+  .border-radius(15px);
+  .center;
+  width: @width;
+  height: @height;
+  background-color: @bg-color;
+  color: @font-color;
+  border: 1px solid @silver;
+  cursor: pointer;
+  font-size: @font-size;
+
+  @media @mobile {
+    width: 100%;
+  }
+
+  &:hover {
+    background: @white;
+    color: @button-bg;
+  }
+}
+
+// display: block;
+// margin: 0 auto;
+// font-family: "Cabin", sans-serif;
+// font-weight: 500;
+// text-transform: uppercase;
+// text-align: center;
+// font-size: 18px;
+// color: #bfa760;
+// border: 2px solid #bfa760;
+// padding: 16px 10px;
+// margin-top: 68px;
+// margin-bottom: 23px;
+// background: transparent;
+// -webkit-transition: 0.5s all ease;
+// -o-transition: 0.5s all ease;
+// transition: 0.5s all ease;
+// width: 260px;
+// height: 65px;
