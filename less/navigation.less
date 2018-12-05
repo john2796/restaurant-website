@@ -38,6 +38,8 @@ header {
 nav {
   background: @transparentBlack;
   z-index: 9999;
+  // border-bottom: 1px solid @lightGray;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.11);
 
 
   .wrapper {
@@ -52,9 +54,36 @@ nav {
     color: @white;
     margin-left: 25px;
     z-index: 9999;
+
+    &:hover {
+      color: @gold;
+    }
+  }
+
+  .active {
+    color: @gold;
   }
 
   a:nth-of-type(1) {
     margin-right: auto;
   }
 }
+
+
+
+
+////// javascript classList
+.anchor_class {
+  color: @gray;
+}
+
+.nav_class {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: @white;
+  transition: 300ms ease-in;
+}
+
+// transition: all 0.3s ease-in;

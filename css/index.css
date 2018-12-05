@@ -272,6 +272,7 @@ header .overlay {
 nav {
   background: rgba(12, 12, 13, 0.78);
   z-index: 9999;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.11);
 }
 nav .wrapper {
   display: flex;
@@ -285,6 +286,23 @@ nav a {
   margin-left: 25px;
   z-index: 9999;
 }
+nav a:hover {
+  color: #c0a756;
+}
+nav .active {
+  color: #c0a756;
+}
 nav a:nth-of-type(1) {
   margin-right: auto;
+}
+.anchor_class {
+  color: #818181;
+}
+.nav_class {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #FFFFFF;
+  transition: 300ms ease-in;
 }
